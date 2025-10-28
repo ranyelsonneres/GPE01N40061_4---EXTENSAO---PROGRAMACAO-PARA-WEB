@@ -19,7 +19,7 @@ app.get('/', (req, res)=>{
 //importar o módulo das rotas
 const apiRoutes = require('./routes/api'); //puxa as rotas definidas dentro de api.js
 
-app.use(express.json); //interpretar os arquivos da req (body)
+app.use(express.json()); //interpretar os arquivos da req (body)
 
 app.use('/api/users/', apiRoutes); //alcançar as rotas do arquivo (api.js)
 
