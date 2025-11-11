@@ -16,6 +16,12 @@ app.get('/', (req, res)=>{
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+//ROTA para a página que faz a listagem de usuários cadastrados no sistema
+app.get('/usuarios', (req, res)=>{
+    //res.send("Funcionou! - Front");
+    res.sendFile(path.join(__dirname, 'public', 'usuarios.html'));
+});
+
 //importar o módulo das rotas
 const apiRoutes = require('./routes/api'); //puxa as rotas definidas dentro de api.js
 
